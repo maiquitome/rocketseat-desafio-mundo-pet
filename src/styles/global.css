@@ -29,15 +29,15 @@
   --color-accent-orange-light: #75501b;
 
   --font-family-title: "Inter Tight", sans-serif;
-  --font-title: 700 1.5rem/2rem var(--font-family-title)
-  
+  --font-title: 700 1.5rem/2rem var(--font-family-title);
+
   --font-family-default: "Inter", sans-serif;
   --font-paragraph-medium: 500 0.875rem/1.5rem var(--font-family-default);
   --font-paragraph-small: 500 0.75rem/1rem var(--font-family-default);
   --font-label-large: 700 1rem/1.5rem var(--font-family-default);
   --font-label-medium: 700 0.875rem/1.5rem var(--font-family-default);
   --font-label-small: 700 0.75rem/1rem var(--font-family-default);
-  --font-link: 500 0.75rem/1rem var(--font-family-default); 
+  --font-link: 500 0.75rem/1rem var(--font-family-default);
 }
 
 body {
@@ -47,4 +47,9 @@ body {
 
   background-color: var(--color-background-primary);
   color: var(--color-content-primary);
+}
+
+.container {
+  max-width: 85.375rem;
+  margin: auto;
 }

@@ -1,0 +1,23 @@
+main {
+  max-width: 54.4375rem;
+  margin: auto;
+  padding-inline: 5rem;
+  padding-block: 3.875rem;
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    & div:first-child {
+      & h1 {
+        font: var(--font-title);
+        color: var(--color-content-primary);
+        padding-bottom: 0.25rem;
+      }
+      & p {
+        font: var(--font-paragraph-medium);
+        color: var(--color-content-secondary);
+      }
+    }
+  }
+}
