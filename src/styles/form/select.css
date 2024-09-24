@@ -12,6 +12,9 @@
   &:has(select.clock) {
     background: url(../../assets/clock.svg) no-repeat 8%;
   }
+  &:hover {
+    border: solid 1px var(--color-border-brand);
+  }
 }
 
 .custom-select select {
