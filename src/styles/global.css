@@ -53,3 +53,12 @@ body {
   max-width: 85.375rem;
   margin: auto;
 }
+
+#logo {
+  background-color: #2e2c30;
+  display: inline-block;
+  padding-block: 0.75rem;
+  padding-inline: 1.25rem;
+  border-bottom-right-radius: 0.75rem;
+  position: absolute;
+}
