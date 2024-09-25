@@ -45,7 +45,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  background-color: var(--color-background-primary);
+  background-color: #14151d;
   color: var(--color-content-primary);
 }
 

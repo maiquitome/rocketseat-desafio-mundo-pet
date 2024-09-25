@@ -1,0 +1,89 @@
+section {
+  background-color: var(--color-background-tertiary);
+  border-radius: 0.75rem;
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    margin-bottom: 0.75rem;
+  }
+
+  & > div.period-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+
+    & > div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      & > img {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+      & > h2 {
+        font: var(--font-label-large);
+        color: var(--color-content-primary);
+      }
+    }
+    & > span {
+      display: inline-block;
+      font: var(--font-label-large);
+      color: var(--color-content-secondary);
+    }
+  }
+  & > div.schedules {
+    padding: 1.25rem;
+    & > div.schedule {
+      padding-inline: 0.75rem;
+      padding-block: 1rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > span:first-child {
+        & > span.time {
+          font: var(--font-label-medium);
+          color: var(--color-content-primary);
+          padding-right: 1rem;
+        }
+        & > span.names {
+          display: inline-block;
+          width: 12.1875rem;
+          & > span.pet-name {
+            font: var(--font-label-small);
+            color: var(--color-content-primary);
+          }
+          & > span.person-name {
+            font: var(--font-paragraph-small);
+            color: var(--color-content-secondary);
+          }
+        }
+        & > span.procedure {
+          font: var(--font-paragraph-small);
+          color: var(--color-content-secondary);
+        }
+      }
+      & > span.remove-schedule {
+        font: var(--font-paragraph-small);
+        color: var(--color-content-tertiary);
+        &:hover {
+          text-decoration: underline;
+          color: var(--color-content-primary);
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.border-bottom {
+  border-bottom: solid 1px var(--color-border-divisor);
+}
+.divisor {
+  height: 1px;
+  background-color: var(--color-border-divisor);
+}
