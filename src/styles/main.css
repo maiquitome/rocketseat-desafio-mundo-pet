@@ -9,8 +9,8 @@ main {
     align-items: center;
     gap: 0.75rem;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
     & > div:first-child {
-      margin-bottom: 2rem;
       & h1 {
         font: var(--font-title);
         color: var(--color-content-primary);
