@@ -1,0 +1,44 @@
+#new-schedule-container {
+  background-color: var(--color-background-tertiary);
+  width: 100%;
+  padding-block: 1.125rem;
+
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 0;
+}
+
+button#new-schedule-desktop {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  font: var(--font-label-large);
+  color: #050505;
+  background-color: var(--color-content-brand);
+  box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+  &:hover {
+    background-color: var(--color-background-highlights);
+  }
+}
+
+@media (min-width: 85.375rem) {
+  button#new-schedule-desktop {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    margin-right: 1.875rem;
+    margin-bottom: 2.0625rem;
+  }
+  #new-schedule-container {
+    display: none;
+  }
+}
