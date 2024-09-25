@@ -7,10 +7,11 @@
   padding-left: 1.5rem;
 
   &:has(select.calendar) {
-    background: url(../../assets/calendar.svg) no-repeat 8%;
+    background: url(../../assets/calendar.svg) 0.75rem center / 1.25rem
+      no-repeat;
   }
   &:has(select.clock) {
-    background: url(../../assets/clock.svg) no-repeat 8%;
+    background: url(../../assets/clock.svg) 0.75rem center / 1.25rem no-repeat;
   }
   &:hover {
     border: 1px solid var(--color-content-secondary);
