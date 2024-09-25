@@ -13,7 +13,7 @@
     background: url(../../assets/clock.svg) no-repeat 8%;
   }
   &:hover {
-    border: solid 1px var(--color-border-brand);
+    border: 1px solid var(--color-content-secondary);
   }
 }
 
@@ -52,9 +52,9 @@
   user-select: none;
 }
 
-.select-items div {
+/* .select-items div {
   border-radius: 0.5rem;
-}
+} */
 
 /*style items (options):*/
 .select-items {
