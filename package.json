@@ -4,6 +4,7 @@
   "author": "Maiqui Pirolli Tomé",
   "scripts": {
     "server": "json-server --watch server.json --port 3333",
+    "dev": "webpack serve",
     "build": "webpack"
   },
   "dependencies": {
