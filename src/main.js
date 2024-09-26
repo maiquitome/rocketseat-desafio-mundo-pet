@@ -1,3 +1,11 @@
+"use strict";
+
+// CSS
+import "./styles/global.css";
+import "./styles/form/index.css";
+import "./styles/main.css";
+import "./styles/section.css";
+
 const newScheduleButtons = document.querySelectorAll(".new-schedule");
 const modal = document.getElementById("modal");
 const container = document.querySelector(".container");
