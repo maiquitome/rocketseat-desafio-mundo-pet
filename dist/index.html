@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./src/assets/logo.svg" />
+
+  <link rel="stylesheet" href="src/styles/index.css">
+
+  <title>Mundo Pet</title>
+<script defer src="main.js"></script></head>
+
+<body>
+  <div id="logo">
+    <img src="./src/assets/logo-with-text.svg" alt="logotipo">
+  </div>
+  <div class="container">
+    <main>
+      <header>
+        <div>
+          <h1>Sua agenda</h1>
+          <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
+        <div id="calendar-container" class="custom-select">
+          <!-- <img src="./src/assets/calendar.svg" alt=""> -->
+          <select class="calendar">
+            <option value="10/01/2024">10/01/2024</option>
+            <option value="11/01/2024">11/01/2024</option>
+            <option value="12/01/2024">12/01/2024</option>
+            <option value="13/01/2024">13/01/2024</option>
+          </select>
+        </div>
+      </header>
+      <section class="period morning">
+        <div class="period-title ">
+          <div>
+            <img src="./src/assets/morning.svg" alt="ícone manhã">
+            <h2>Manhã</h2>
+          </div>
+          <span>09h-12h</span>
+        </div>
+        <div class="divisor"></div>
+        <div class="schedules">
+          <div class="schedule">
+            <span>
+              <span class="time">09:00</span>
+              <span class="names">
+                <span class="pet-name">Thor</span>
+                <span class="person-name"> / Fernanda Costa</span>
+              </span>
+              <span class="procedure">Vacinação</span>
+            </span>
+            <span class="remove-schedule">Remover agendamento</span>
+          </div>
+        </div>
+      </section>
+      <section class="period afternoon">
+        <div class="period-title ">
+          <div>
+            <img src="./src/assets/afternoon.svg" alt="ícone tarde">
+            <h2>Tarde</h2>
+          </div>
+          <span>13h-18h</span>
+        </div>
+        <div class="divisor"></div>
+        <div class="schedules">
+          <div class="schedule border-bottom">
+            <span>
+              <span class="time">13:00</span>
+              <span class="names">
+                <span class="pet-name">Mel</span>
+                <span class="person-name"> / João Souza</span>
+              </span>
+              <span class="procedure">Corte de Unhas</span>
+            </span>
+            <span class="remove-schedule">Remover agendamento</span>
+          </div>
+          <div class="schedule border-bottom">
+            <span>
+              <span class="time">14:00</span>
+              <span class="names">
+                <span class="pet-name">Bella</span>
+                <span class="person-name"> / Pedro Martins</span>
+              </span>
+              <span class="procedure">Aplicação de Anti-pulgas</span>
+            </span>
+            <span class="remove-schedule">Remover agendamento</span>
+          </div>
+          <div class="schedule">
+            <span>
+              <span class="time">15:00</span>
+              <span class="names">
+                <span class="pet-name">Simba</span>
+                <span class="person-name"> / Juliana Rocha</span>
+              </span>
+              <span class="procedure">Tosa Higiênica</span>
+            </span>
+            <span class="remove-schedule">Remover agendamento</span>
+          </div>
+        </div>
+      </section>
+      <section class="period evening">
+        <div class="period-title ">
+          <div>
+            <img src="./src/assets/evening.svg" alt="ícone noite">
+            <h2>Noite</h2>
+          </div>
+          <span>19h-21h</span>
+        </div>
+        <div class="divisor"></div>
+        <div class="schedules">
+          <div class="schedule">
+            <span>
+              <span class="time">20:00</span>
+              <span class="names">
+                <span class="pet-name">Max</span>
+                <span class="person-name"> / Camila Santos</span>
+              </span>
+              <span class="procedure">Limpeza de Dentes</span>
+            </span>
+            <span class="remove-schedule">Remover agendamento</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="modal" class="hiding">
+    <form>
+      <img id="close-modal" src="./src/assets/x.svg" alt="ícone fechar">
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+      <div class="input-wrapper">
+        <label for="tutor-name">Nome do tutor</label>
+        <input name="tutor-name" id="tutor-name" type="text" placeholder="Helena Souza" required />
+      </div>
+      <div class="input-wrapper">
+        <label for="pet-name">Nome do pet</label>
+        <input name="pet-name" id="pet-name" type="text" placeholder="Cheddar" required />
+      </div>
+      <div class="input-wrapper">
+        <label for="fone">Telefone</label>
+        <input name="fone" id="fone" type="tel" placeholder="(00) 0 0000-0000" required />
+      </div>
+      <div class="input-wrapper">
+        <label for="service-description">Descrição do serviço</label>
+        <textarea name="service-description" id="service-description" placeholder="Banho e tosa" rows="2" required></textarea>
+      </div>
+      <div class="selects">
+        <div class="input-wrapper">
+          <label for="date">Data</label>
+          <div class="custom-select">
+            <select class="calendar" id="date" name="date">
+              <option value="10/01/2024">10/01/2024</option>
+              <option value="11/01/2024">11/01/2024</option>
+              <option value="12/01/2024">12/01/2024</option>
+              <option value="13/01/2024">13/01/2024</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <label for="hour">Hora</label>
+          <div class="custom-select">
+            <select name="hour" id="hour" class="clock">
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button type="submit">AGENDAR</button>
+    </form>
+  </div>
+  <button class="new-schedule" id="new-schedule-desktop">NOVO AGENDAMENTO</button>
+  <div id="new-schedule-container">
+    <button class="new-schedule">NOVO AGENDAMENTO</button>
+  </div>
+
+  <script src="./select.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+
+</html>
