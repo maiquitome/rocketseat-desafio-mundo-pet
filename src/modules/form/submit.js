@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { closeModal } from "./modal";
+import { newSchedule } from "../../services/new-schedule.js";
 
 const form = document.querySelector("form");
 const dateInput = document.getElementById("date");
@@ -19,21 +20,40 @@ dateInput.min = today;
 
 timeInput.value = time;
 
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
   event.preventDefault();
 
-  console.log({
-    tutorName: tutorNameInput.value,
-    petName: petNameInput.value,
-    fone: foneInput.value,
-    serviceDescription: serviceDescriptionInput.value,
-    date: dateInput.value,
-    time: timeInput.value,
-  });
+  try {
+    const tutorName = tutorNameInput.value.trim();
+    if (!tutorName) return alert("Informe o nome do cliente!");
 
-  closeModal();
+    const petName = petNameInput.value.trim();
+    if (!petName) return alert("Informe o nome do pet!");
 
-  clearInputs();
+    const fone = foneInput.value.trim();
+    if (!fone) return alert("Informe o número do telefone!");
+
+    const serviceDescription = serviceDescriptionInput.value.trim();
+    if (!serviceDescription) return alert("Informe a descrição do serviço!");
+
+    const id = new Date().getTime();
+
+    await newSchedule({
+      id,
+      tutor_name: tutorName,
+      pet_name: petName,
+      fone,
+      service_description: serviceDescription,
+      date: dateInput.value,
+      time: timeInput.value,
+    });
+
+    closeModal();
+    clearInputs();
+  } catch (error) {
+    alert("Não foi possível realizar o agendamento.");
+    console.log(error);
+  }
 };
 
 function clearInputs() {
