@@ -21,8 +21,8 @@ main {
         color: var(--color-content-secondary);
       }
     }
-    & div:last-child {
-      width: 10.75rem;
+    & > div:last-child#date-filter {
+      min-width: 10.75rem;
     }
   }
 }

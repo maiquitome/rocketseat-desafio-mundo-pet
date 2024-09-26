@@ -9,10 +9,6 @@ import "./styles/form/index.css";
 import "./styles/main.css";
 import "./styles/section.css";
 
-// JS
-import "./modules/form/select.js";
-import "./modules/form/load-dates.js";
-
 const newScheduleButtons = document.querySelectorAll(".new-schedule");
 const modal = document.getElementById("modal");
 const container = document.querySelector(".container");

@@ -15,8 +15,16 @@ textarea {
   &:hover {
     border: 1px solid var(--color-content-secondary);
   }
-  &:focus {
+  &:focus,
+  &:focus-within {
     border: 1px solid var(--color-content-brand);
+  }
+  &[name="date"] {
+    background: url(../../assets/calendar.svg) 0.75rem center / 1.25rem
+      no-repeat;
+  }
+  &[name="time"] {
+    background: url(../../assets/clock.svg) 0.75rem center / 1.25rem no-repeat;
   }
   &[name="tutor-name"] {
     background: url(../../assets/user.svg) 0.75rem center / 1.25rem no-repeat;
@@ -31,6 +39,11 @@ textarea {
     /* background: url(../../assets/pet.svg) 0.75rem 0.75rem / 1.25rem no-repeat; */
     padding: 0.75rem;
   }
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("../../assets/arrow.svg") no-repeat;
 }
 
 label {

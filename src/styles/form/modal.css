@@ -44,7 +44,7 @@
     & > div.input-wrapper {
       margin-bottom: 1rem;
     }
-    & > div.selects {
+    & > div.date-and-time {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
