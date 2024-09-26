@@ -1,4 +1,7 @@
 {
+  "name": "mundo-pet",
+  "description": "Aplicação Web de agendamento para serviços pet",
+  "author": "Maiqui Pirolli Tomé",
   "scripts": {
     "server": "json-server --watch server.json --port 3333"
   },
