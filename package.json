@@ -3,7 +3,8 @@
   "description": "Aplicação Web de agendamento para serviços pet",
   "author": "Maiqui Pirolli Tomé",
   "scripts": {
-    "server": "json-server --watch server.json --port 3333"
+    "server": "json-server --watch server.json --port 3333",
+    "build": "webpack"
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.21"
