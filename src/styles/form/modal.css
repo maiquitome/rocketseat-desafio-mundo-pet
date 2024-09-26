@@ -1,0 +1,66 @@
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & form {
+    width: 29.8125rem;
+    /* height: 44.75rem; */
+
+    background-color: var(--color-background-tertiary);
+    border-radius: 0.75rem;
+
+    padding-block: 2.34375rem;
+    padding-inline: 2.5rem;
+
+    position: relative;
+    & > img#close-modal {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      &:hover {
+        filter: invert(66%) sepia(35%) saturate(7151%) hue-rotate(216deg)
+          brightness(101%) contrast(96%);
+      }
+    }
+
+    & > h2 {
+      font: var(--font-title);
+      padding-bottom: 0.25rem;
+    }
+    & > p {
+      font: var(--font-paragraph-medium);
+      color: var(--color-content-secondary);
+      padding-bottom: 1.75rem;
+    }
+
+    & > div.input-wrapper {
+      margin-bottom: 1rem;
+    }
+    & > div.selects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      & > div.input-wrapper {
+        flex: 1;
+        min-width: 11.90625rem;
+      }
+    }
+    & > button {
+      float: right;
+      margin-top: 1.75rem;
+    }
+  }
+}
+
+.container.blur {
+  filter: blur(12px);
+}

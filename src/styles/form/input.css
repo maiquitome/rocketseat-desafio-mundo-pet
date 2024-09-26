@@ -1,0 +1,41 @@
+input,
+textarea {
+  font: var(--font-placeholder);
+  color: var(--color-content-primary);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  background-color: inherit;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 0.5rem;
+  &::placeholder {
+    color: var(--color-content-secondary);
+  }
+  &:hover {
+    border: 1px solid var(--color-content-secondary);
+  }
+  &:focus {
+    border: 1px solid var(--color-content-brand);
+  }
+  &[name="tutor-name"] {
+    background: url(../../assets/user.svg) 0.75rem center / 1.25rem no-repeat;
+  }
+  &[name="pet-name"] {
+    background: url(../../assets/pet.svg) 0.75rem center / 1.25rem no-repeat;
+  }
+  &[name="fone"] {
+    background: url(../../assets/fone.svg) 0.75rem center / 1.25rem no-repeat;
+  }
+  &[name="service-description"] {
+    /* background: url(../../assets/pet.svg) 0.75rem 0.75rem / 1.25rem no-repeat; */
+    padding: 0.75rem;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font: var(--font-label-medium);
+  color: var(--color-content-primary);
+}

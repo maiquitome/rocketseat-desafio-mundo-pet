@@ -38,6 +38,7 @@
   --font-label-medium: 700 0.875rem/1.5rem var(--font-family-default);
   --font-label-small: 700 0.75rem/1rem var(--font-family-default);
   --font-link: 500 0.75rem/1rem var(--font-family-default);
+  --font-placeholder: 400 1rem/1.5rem var(--font-family-default);
 }
 
 body {
@@ -61,4 +62,8 @@ body {
   padding-inline: 1.25rem;
   border-bottom-right-radius: 0.75rem;
   position: absolute;
+}
+
+.hiding {
+  display: none !important;
 }
