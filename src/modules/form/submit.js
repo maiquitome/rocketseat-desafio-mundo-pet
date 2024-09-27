@@ -40,7 +40,7 @@ form.onsubmit = async (event) => {
     const id = new Date().getTime();
 
     await newSchedule({
-      id,
+      id: String(id),
       tutor_name: tutorName,
       pet_name: petName,
       fone,
