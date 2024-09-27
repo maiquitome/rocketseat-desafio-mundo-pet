@@ -28,15 +28,20 @@ button {
   }
 }
 
-@media (min-width: 85.375rem) {
-  button#new-schedule-desktop {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+button#new-schedule-desktop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 
-    margin-right: 1.875rem;
-    margin-bottom: 2.0625rem;
+  margin-right: 1.875rem;
+  margin-bottom: 2.0625rem;
+}
+
+@media (min-width: 85.375rem) {
+  body:has(div#modal.hiding) {
+    & > button#new-schedule-desktop {
+      display: block;
+    }
   }
   #new-schedule-container {
     display: none;
