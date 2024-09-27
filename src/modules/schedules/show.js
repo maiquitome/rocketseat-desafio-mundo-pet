@@ -1,3 +1,5 @@
+import { deleteSchedule } from "../../services/delete-schedule";
+
 const periodMorningSchedules = document.querySelector(
   ".period.morning > .schedules"
 );
@@ -64,14 +66,20 @@ function buildSchedule(schedule) {
   removeScheduleSpan.classList.add("remove-schedule");
   removeScheduleSpan.textContent = "Remover agendamento";
 
+  removeScheduleSpan.onclick = () => {
+    const isConfirm = confirm("Tem certeza que deseja cancelar o agendamento?");
+    if (isConfirm) {
+      deleteSchedule(schedule.id);
+      removeScheduleSpan.closest("div.schedule").outerHTML = "";
+    }
+  };
+
   namesSpan.append(tutorNameSpan);
   namesSpan.prepend(petNameSpan);
   span.append(namesSpan);
   span.append(serviceDescriptionSpan);
   scheduleDiv.append(span);
   scheduleDiv.append(removeScheduleSpan);
-
-  console.log(scheduleDiv);
 
   const time = String(schedule.time.replace(":", ""));
 
