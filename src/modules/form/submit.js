@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import { closeModal } from "./modal";
 import { newSchedule } from "../../services/new-schedule.js";
+import { loadSchedules } from "../../modules/schedules/load.js";
 
 const form = document.querySelector("form");
 const dateInput = document.getElementById("date");
@@ -47,6 +48,8 @@ form.onsubmit = async (event) => {
       date: dateInput.value,
       time: timeInput.value,
     });
+
+    await loadSchedules(dateInput.value);
 
     closeModal();
     clearInputs();
